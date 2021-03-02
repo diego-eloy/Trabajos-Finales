@@ -1,7 +1,8 @@
+import { Conocimiento } from './Conocimiento';
 export interface Asignatura{
     nombre:string;
     profesor:string;
-    conocimientos:any[];
+    conocimientos: Conocimiento[];
     ciclo:string;
     curso:number;
 }

@@ -10,18 +10,22 @@
             </div>
         </div>
         <h4>Conocimientos necesarios:</h4>
-        <ul class="list-group" *ngFor="let item of listaConocimientosAsignaturas">
+        <ul class="list-group" *ngFor="let item of listaDetalleAsignaturas">
             <li class="list-group-item">{{item.nombre}}</li>
         </ul>
     </div>
 
     <div class="col">
         <h3>Las Asignaturas del ciclo son:</h3>
-        <div class="row" *ngFor="let item of listaAsingaturas">
-            <h4>{{item.nombre}}</h4>
-
-            <div class="col" *ngFor="let item of ">
-                <img src="{{item.imagen}}">
+        <div class="col" *ngFor="let item of listaDetalleAsignaturas">
+            <div class="card" style="width: 19rem;">
+                <div class="card-body">
+                    <h4>{{item.nombre}}</h4>
+                    <p>{{item.profesor}}</p>
+                    <p>{{item.curso}}</p>
+                    <p>{{item.ciclo}}</p>
+                    
+                </div>
             </div>
         </div>
         

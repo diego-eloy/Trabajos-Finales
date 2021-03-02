@@ -1,3 +1,4 @@
+import { Conocimiento } from './../utils/Conocimiento';
 import { element } from 'protractor';
 import { Asignatura } from './../utils/Asignatura';
 import { Ciclo } from './../utils/Ciclo';
@@ -185,13 +186,23 @@ export class AsignaturasService {
 
   listaAsignaturasDam: Asignatura[] = [];
   listaAsignaturasDaw: Asignatura[] = [];
+
   listaDetalleAsignaturas: Asignatura[] = [];
-  listaConocimientosAsignaturas: Asignatura[] = [];
-  listaAsignaturasCiclos: Asignatura[] = [];
+  listaConocimientosAsignaturas: Conocimiento[] = [];
+  
 
 
   getListaAsignaturas(): Asignatura[] {
     return this.listaAsignaturas;
+  }
+
+  getCicloDetalle(number: number, nombre: string): Asignatura[] {
+    this.listaAsignaturas.forEach(item => {
+      if (item.ciclo.includes(nombre || number)) {
+        this.listaDetalleAsignaturas.push(item)
+      }
+    });
+    return this.listaDetalleAsignaturas;
   }
 
   getAsignaturasDaw(): Asignatura[] {
@@ -215,26 +226,21 @@ export class AsignaturasService {
     return this.listaAsignaturasDam
   }
 
-  getCicloDetalle(number: number, nombre: string): Asignatura[] {
-    this.listaAsignaturas.forEach(item => {
-      if (item.ciclo.includes(nombre || number)) {
-        this.listaDetalleAsignaturas.push(item)
+  getCicloDetalleConocimientos(number: number, nombre: string): Conocimiento[] {
+    this.listaAsignaturas.forEach((item)=>{
+      if (item.ciclo.includes(nombre || "DAM | DAW") && item.curso == number) {
+        console.log(item.conocimientos);
+        this.listaConocimientosAsignaturas.push(item.conocimientos);
       }
+       
     });
-    return this.listaDetalleAsignaturas;
-  }
-  getCicloDetalleConocimientos(number: number, nombre: string): Asignatura[] {
-    this.listaAsignaturas.forEach(item => {
-      if (item.ciclo.includes(nombre && number)) {
-        item.conocimientos.forEach(element => {
-          this.listaConocimientosAsignaturas.push(element)
-        });
-      }
-    });
+    
     return this.listaConocimientosAsignaturas;
   }
+  
+ getAsignaturaDetalleConocomiento(){
 
- 
+ }
 
 
 

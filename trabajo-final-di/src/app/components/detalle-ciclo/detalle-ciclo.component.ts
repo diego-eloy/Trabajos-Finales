@@ -1,3 +1,4 @@
+import { Conocimiento } from './../../utils/Conocimiento';
 import { CiclosService } from './../../services/ciclos.service';
 import { Ciclo } from './../../utils/Ciclo';
 import { AsignaturasService } from './../../services/asignaturas.service';
@@ -17,7 +18,7 @@ export class DetalleCicloComponent implements OnInit {
 
 
   listaDetalleAsignaturas:Asignatura[]= [];
-  listaConocimientosAsignaturas:Asignatura[]= [];
+  listaConocimientosAsignaturas:Conocimiento[]= [];
   listaCiclos:Ciclo[] = [];
   listaAsingaturas:Asignatura[] = [];
 
@@ -27,11 +28,11 @@ export class DetalleCicloComponent implements OnInit {
     this.gestorRutasActivas.paramMap.subscribe(param =>{
       this.curso = parseInt(param.get('number'));
       this.nombre = (param.get('nombre'));
-      this.listaCiclos =this.servicioCiclos.getCicloDetalle(this.curso,this.nombre);
-      this.listaDetalleAsignaturas = this.servicioAsignaturas.getCicloDetalle(this.curso,this.nombre);
-    
       
-    })
+    });
+    this.listaCiclos =this.servicioCiclos.getCicloDetalle(this.curso,this.nombre);
+    this.listaDetalleAsignaturas = this.servicioAsignaturas.getCicloDetalle(this.curso,this.nombre);
+    this.listaConocimientosAsignaturas = this.servicioAsignaturas.getCicloDetalleConocimientos(this.curso,this.nombre);
   }
 
 }
