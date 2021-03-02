@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "386341190655",
+    "project_id": "trabajofinal2-fda13",
+    "storage_bucket": "trabajofinal2-fda13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386341190655:android:ddc8b32983895e9f1c85ca",
+        "android_client_info": {
+          "package_name": "com.app.final"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "386341190655-1ee4etdhgd75nqithdqe7nqprhfevea5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2hk5jTL7qG3KfSSEFqBNNICP5g7k53F8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "386341190655-1ee4etdhgd75nqithdqe7nqprhfevea5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386341190655:android:83340701a5cc716c1c85ca",
+        "android_client_info": {
+          "package_name": "com.diego.trabajo_final"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "386341190655-1ee4etdhgd75nqithdqe7nqprhfevea5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2hk5jTL7qG3KfSSEFqBNNICP5g7k53F8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "386341190655-1ee4etdhgd75nqithdqe7nqprhfevea5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
